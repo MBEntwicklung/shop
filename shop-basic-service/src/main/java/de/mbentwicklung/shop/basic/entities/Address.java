@@ -1,6 +1,11 @@
 package de.mbentwicklung.shop.basic.entities;
 
-public class Address {
+import org.springframework.data.jpa.domain.AbstractPersistable;
+
+public class Address extends AbstractPersistable<Long> {
+	
+	private Long id;
+	
 	private User user;
 	private String street;
 	private String housenumber;

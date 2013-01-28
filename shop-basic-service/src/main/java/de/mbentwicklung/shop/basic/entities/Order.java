@@ -2,7 +2,9 @@ package de.mbentwicklung.shop.basic.entities;
 
 import java.util.List;
 
-public class Order {
+import org.springframework.data.jpa.domain.AbstractPersistable;
+
+public class Order extends AbstractPersistable<Long> {
 
 	private User user;
 	

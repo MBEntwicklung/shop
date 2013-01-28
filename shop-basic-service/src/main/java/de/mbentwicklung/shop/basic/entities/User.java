@@ -1,6 +1,8 @@
 package de.mbentwicklung.shop.basic.entities;
 
-public class User {
+import org.springframework.data.jpa.domain.AbstractPersistable;
+
+public class User extends AbstractPersistable<Long> {
 
 	private String login;
 	private String firstName;

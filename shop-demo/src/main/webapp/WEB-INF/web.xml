@@ -17,11 +17,11 @@
 			<param-name>UI</param-name>
 			<param-value>de.mbentwicklung.shop.ApplicationUI</param-value>
 		</init-param>
-		<init-param>
+<!-- 		<init-param>
 			<description>Application widgetset</description>
 			<param-name>widgetset</param-name>
 			<param-value>de.mbentwicklung.shop.AppWidgetSet</param-value>
-		</init-param>
+		</init-param> -->
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Vaadin Application Servlet</servlet-name>

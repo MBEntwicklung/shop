@@ -2,7 +2,9 @@ package de.mbentwicklung.shop.basic.entities;
 
 import java.util.List;
 
-public class Product {
+import org.springframework.data.jpa.domain.AbstractPersistable;
+
+public class Product extends AbstractPersistable<Long> {
 
 	private String name;
 	private String text;

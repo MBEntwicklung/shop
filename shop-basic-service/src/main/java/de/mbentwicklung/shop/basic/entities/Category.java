@@ -1,6 +1,8 @@
 package de.mbentwicklung.shop.basic.entities;
 
-public class Category {
+import org.springframework.data.jpa.domain.AbstractPersistable;
+
+public class Category extends AbstractPersistable<Long> {
 
 	private Category rootCategory;
 	private String name;

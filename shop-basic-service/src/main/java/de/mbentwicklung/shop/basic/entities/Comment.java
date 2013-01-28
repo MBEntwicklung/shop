@@ -2,7 +2,9 @@ package de.mbentwicklung.shop.basic.entities;
 
 import java.util.Date;
 
-public class Comment {
+import org.springframework.data.jpa.domain.AbstractPersistable;
+
+public class Comment extends AbstractPersistable<Long> {
 
 	private Product product;
 	private User user;

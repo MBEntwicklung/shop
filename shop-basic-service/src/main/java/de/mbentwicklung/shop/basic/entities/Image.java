@@ -1,5 +1,7 @@
 package de.mbentwicklung.shop.basic.entities;
 
-public class Image {
+import org.springframework.data.jpa.domain.AbstractPersistable;
+
+public class Image extends AbstractPersistable<Long> {
 
 }

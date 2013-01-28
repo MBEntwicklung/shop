@@ -1,0 +1,19 @@
+
+<persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
+	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+	<!-- By default your mappings can be defined in orm.xml file, -->
+	<!-- which is discovered automatically. -->
+	<mapping-file>META-INF/my-mappings.xml</mapping-file>
+	...
+	<jar-file>my-additional-jar.jar</jar-file>
+	...
+	<!-- Enables auto discovery of persistent classes, -->
+	<!-- otherwise they must be listed using <class> -->
+	<exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+	<properties>
+		
+	</properties>
+</persistence-unit>
+

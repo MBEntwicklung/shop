@@ -1,6 +1,8 @@
 package de.mbentwicklung.shop.basic.entities;
 
-public class SimplePage {
+import org.springframework.data.jpa.domain.AbstractPersistable;
+
+public class SimplePage extends AbstractPersistable<Long> {
 	private String name;
 	private String text;
 
