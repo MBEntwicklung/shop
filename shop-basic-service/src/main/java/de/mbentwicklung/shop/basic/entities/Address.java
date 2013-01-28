@@ -1,10 +1,11 @@
 package de.mbentwicklung.shop.basic.entities;
 
+import javax.persistence.Entity;
+
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
+@Entity
 public class Address extends AbstractPersistable<Long> {
-	
-	private Long id;
 	
 	private User user;
 	private String street;
@@ -75,5 +76,4 @@ public class Address extends AbstractPersistable<Long> {
 	public void setCountry(Country country) {
 		this.country = country;
 	}
-
 }
