@@ -3,12 +3,35 @@
 	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
-	<display-name>Vaadin Web Application</display-name>
+
+	<display-name>Shop</display-name>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+            classpath:context/context-repositories.xml
+            classpath:context/context-shop-basic-service.xml
+            classpath:context/context-shop-basic-web.xml
+        </param-value>
+	</context-param>
+
 	<context-param>
 		<description>Vaadin production mode</description>
 		<param-name>productionMode</param-name>
 		<param-value>false</param-value>
 	</context-param>
+
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- Spring Request Context Listener -->
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+
+
 	<servlet>
 		<servlet-name>Vaadin Application Servlet</servlet-name>
 		<servlet-class>com.vaadin.server.VaadinServlet</servlet-class>

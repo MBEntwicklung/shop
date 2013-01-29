@@ -1,2 +1,0 @@
-# Module de.mbentwicklung.shop.AppWidgetSet
-# RPC service class, partial path of RPC policy file
