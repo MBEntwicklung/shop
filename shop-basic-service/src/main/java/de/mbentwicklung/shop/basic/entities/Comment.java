@@ -12,14 +12,14 @@ public class Comment extends AbstractPersistable<Long> {
 	private Product product;
 	private User user;
 	private String text;
-	private Date creationDate;
+	private String creationDate;
 
 	Comment() {
 
 	}
 
 	public Comment(final Product product, final User user, final String text,
-			final Date creationDate) {
+			final String creationDate) {
 
 		super();
 		this.product = product;
@@ -52,11 +52,11 @@ public class Comment extends AbstractPersistable<Long> {
 		this.text = text;
 	}
 
-	public Date getCreationDate() {
+	public String getCreationDate() {
 		return creationDate;
 	}
 
-	public void setCreationDate(Date creationDate) {
+	public void setCreationDate(String creationDate) {
 		this.creationDate = creationDate;
 	}
 
