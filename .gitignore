@@ -6,3 +6,6 @@ target
 */.project
 */.settings
 */.classpath
+
+shop-web/src/main/resources/liquibase.properties
+shop-web/src/main/resources/database.properties

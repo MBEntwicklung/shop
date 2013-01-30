@@ -9,7 +9,7 @@
 	<modules>
 		<module>shop-basic-service</module>
 		<module>shop-basic-web</module>
-		<module>shop-web</module>
+		<module>shop-demo</module>
 	</modules>
 
 	<properties>
