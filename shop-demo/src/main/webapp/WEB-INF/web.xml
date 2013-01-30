@@ -9,6 +9,7 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
+			classpath:context/context-main.xml
             classpath:context/context-repositories.xml
             classpath:context/context-shop-basic-service.xml
             classpath:context/context-shop-basic-web.xml
@@ -20,7 +21,6 @@
 		<param-name>productionMode</param-name>
 		<param-value>false</param-value>
 	</context-param>
-
 
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -34,17 +34,17 @@
 
 	<servlet>
 		<servlet-name>Vaadin Application Servlet</servlet-name>
-		<servlet-class>com.vaadin.server.VaadinServlet</servlet-class>
+		<servlet-class>ru.xpoft.vaadin.SpringVaadinServlet</servlet-class>
 		<init-param>
 			<description>Vaadin UI to display</description>
-			<param-name>UI</param-name>
-			<param-value>de.mbentwicklung.shop.ApplicationUI</param-value>
+			<param-name>beanName</param-name>
+			<param-value>shopApplication</param-value>
 		</init-param>
-		<init-param>
+<!-- 		<init-param>
 			<description>Application widgetset</description>
 			<param-name>widgetset</param-name>
 			<param-value>de.mbentwicklung.shop.AppWidgetSet</param-value>
-		</init-param>
+		</init-param> -->
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Vaadin Application Servlet</servlet-name>

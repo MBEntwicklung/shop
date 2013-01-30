@@ -5,8 +5,14 @@
 				http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
 				http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
-	<bean id="categoryService" class="de.mbentwicklung.shop.basic.services.CategoryServiceImpl"/>
-	<bean id="productOverviewService" class="de.mbentwicklung.shop.basic.services.ProductOverviewServiceImpl"/>
-	<bean id="userRegistrationService" class="de.mbentwicklung.shop.basic.services.UserRegistrationServiceImpl"/>
+	<bean id="categoryService" class="de.mbentwicklung.shop.basic.services.CategoryServiceImpl">
+	</bean>
+	
+	<bean id="productOverviewService" class="de.mbentwicklung.shop.basic.services.ProductOverviewServiceImpl">
+	</bean>
+	
+	<bean id="userRegistrationService" class="de.mbentwicklung.shop.basic.services.UserRegistrationServiceImpl">
+		<property name="addressRepository" ref="addressRepository" />
+	</bean>
 </beans>
 
