@@ -12,6 +12,8 @@
 	<context:spring-configured />
 	<context:component-scan base-package="de.mbentwicklung.shop" />
 	
+	<import resource="infrastructure.xml" />
+	
 	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
 	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
 
