@@ -4,36 +4,82 @@ import javax.persistence.Entity;
 
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
+/**
+ * Repräsentiert eine Kategorie, in die Produkte eingeordnet werden können
+ * 
+ * @author Marc Bellmann <marc.bellmann@mb-entwicklung.de>
+ */
 @Entity
 public class Category extends AbstractPersistable<Long> {
 
+	/**
+	 * serialVersionUID
+	 */
+	private static final long serialVersionUID = -9080437845695953351L;
+
+	/**
+	 * übergeordnete Kategorie
+	 */
 	private Category rootCategory;
+
+	/**
+	 * Name der Kategorie
+	 */
 	private String name;
 
+	/**
+	 * JPA Konstruktur
+	 */
 	Category() {
 		super();
 	}
 
-	public Category(Category rootCategory, String name) {
+	/**
+	 * Konstruktor
+	 * 
+	 * @param rootCategory übergeordnete Kategorie
+	 * @param name Name der Kategorie
+	 */
+	public Category(final Category rootCategory, final String name) {
+
 		super();
 		this.rootCategory = rootCategory;
 		this.name = name;
 	}
 
+	/**
+	 * Getter
+	 * 
+	 * @return übergeordnete Kategorie
+	 */
 	public Category getRootCategory() {
 		return rootCategory;
 	}
 
+	/**
+	 * Setter
+	 * 
+	 * @param rootCategory übergeordnete Kategorie
+	 */
 	public void setRootCategory(Category rootCategory) {
 		this.rootCategory = rootCategory;
 	}
 
+	/**
+	 * Getter
+	 * 
+	 * @return Name der Kategorie
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * Setter
+	 * 
+	 * @param name Name der Kategorie
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
-
 }

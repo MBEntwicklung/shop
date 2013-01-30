@@ -4,33 +4,80 @@ import javax.persistence.Entity;
 
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
+/**
+ * Eine einfache Seite im Shop
+ * 
+ * @author Marc Bellmann <marc.bellmann@mb-entwicklung.de>
+ */
 @Entity
 public class SimplePage extends AbstractPersistable<Long> {
-	private String name;
+
+	/**
+	 * serialVersionUID
+	 */
+	private static final long serialVersionUID = -781550495713900648L;
+
+	/**
+	 * Titel der Seite
+	 */
+	private String title;
+
+	/**
+	 * Inhalt der Seite
+	 */
 	private String text;
 
+	/**
+	 * JPA Konstruktor
+	 */
 	SimplePage() {
 		super();
 	}
 
-	public SimplePage(String name, String text) {
+	/**
+	 * Konstruktor
+	 * 
+	 * @param name Titel der Seite
+	 * @param text
+	 */
+	public SimplePage(final String name, final String text) {
 		super();
-		this.name = name;
+		this.title = name;
 		this.text = text;
 	}
 
-	public String getName() {
-		return name;
+	/**
+	 * Getter
+	 * 
+	 * @return Titel der Seite
+	 */
+	public String getTitle() {
+		return title;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	/**
+	 * Setter
+	 * 
+	 * @param name Titel der Seite
+	 */
+	public void setTitle(String name) {
+		this.title = name;
 	}
 
+	/**
+	 * Getter
+	 * 
+	 * @return Inhalt der Seite
+	 */
 	public String getText() {
 		return text;
 	}
 
+	/**
+	 * Setter
+	 * 
+	 * @param text Inhalt der Seite
+	 */
 	public void setText(String text) {
 		this.text = text;
 	}
