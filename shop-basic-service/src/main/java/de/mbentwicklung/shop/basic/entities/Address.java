@@ -23,6 +23,16 @@ public class Address extends AbstractPersistable<Long> {
 	private User user;
 
 	/**
+	 * Vorname
+	 */
+	private String firstName;
+
+	/**
+	 * Nachname
+	 */
+	private String lastName;
+
+	/**
 	 * Straße
 	 */
 	private String street;
@@ -32,6 +42,11 @@ public class Address extends AbstractPersistable<Long> {
 	 */
 	private String housenumber;
 
+	/**
+	 * Adresszusatz
+	 */
+	private String addition; 
+	
 	/**
 	 * Stadt
 	 */

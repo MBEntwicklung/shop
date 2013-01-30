@@ -18,7 +18,7 @@ public class Category extends AbstractPersistable<Long> {
 	private static final long serialVersionUID = -9080437845695953351L;
 
 	/**
-	 * übergeordnete Kategorie
+	 * übergeordnete Kategorie (nullable)
 	 */
 	private Category rootCategory;
 
@@ -37,7 +37,7 @@ public class Category extends AbstractPersistable<Long> {
 	/**
 	 * Konstruktor
 	 * 
-	 * @param rootCategory übergeordnete Kategorie
+	 * @param rootCategory übergeordnete Kategorie (nullable)
 	 * @param name Name der Kategorie
 	 */
 	public Category(final Category rootCategory, final String name) {
@@ -50,7 +50,7 @@ public class Category extends AbstractPersistable<Long> {
 	/**
 	 * Getter
 	 * 
-	 * @return übergeordnete Kategorie
+	 * @return übergeordnete Kategorie (nullable)
 	 */
 	public Category getRootCategory() {
 		return rootCategory;
@@ -59,10 +59,19 @@ public class Category extends AbstractPersistable<Long> {
 	/**
 	 * Setter
 	 * 
-	 * @param rootCategory übergeordnete Kategorie
+	 * @param rootCategory übergeordnete Kategorie (nullable)
 	 */
 	public void setRootCategory(Category rootCategory) {
 		this.rootCategory = rootCategory;
+	}
+
+	/**
+	 * Getter
+	 * 
+	 * @return Existiert zur Kategorie eine übergeordnete Kategorie
+	 */
+	public boolean hasRootCategory() {
+		return this.rootCategory != null;
 	}
 
 	/**

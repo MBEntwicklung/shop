@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+	<changeSet id="ADDRESSES-1" author="MBE">
+		<createTable tableName="ADDRESSES">
+			<column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="user" type="int">
+                <constraints nullable="false"/>
+			</column>
+			<column name="firstName" type="varchar(100)">
+                <constraints nullable="false"/>
+			</column>
+			<column name="lastName" type="varchar(100)">
+                <constraints nullable="false"/>
+			</column>
+			<column name="street" type="varchar(100)">
+                <constraints nullable="false"/>
+			</column>
+			<column name="housenumber" type="varchar(100)">
+                <constraints nullable="false"/>
+			</column>
+			<column name="addition" type="varchar(100)">
+                <constraints nullable="false"/>
+			</column>
+			<column name="city" type="varchar(100)">
+                <constraints nullable="false"/>
+			</column>
+			<column name="postcode" type="varchar(100)">
+                <constraints nullable="false"/>
+			</column>
+			<column name="country" type="varchar(100)">
+                <constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+
+
+	<changeSet id="CATEGORIES-1" author="MBE">
+		<createTable tableName="CATEGORIES">
+			<column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="rootCategory" type="int">
+                <constraints nullable="true"/>
+			</column>
+			<column name="name" type="varchar(100)">
+                <constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+
+
+	<changeSet id="COMMENTS-1" author="MBE">
+		<createTable tableName="COMMENTS">
+			<column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="product" type="int">
+                <constraints nullable="false"/>
+			</column>
+			<column name="user" type="int">
+                <constraints nullable="false"/>
+			</column>
+			<column name="text" type="varchar(1000)">
+                <constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+
+
+	<changeSet id="PRODUCTS-1" author="MBE">
+		<createTable tableName="PRODUCTS">
+			<column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="name" type="varchar(100)">
+                <constraints nullable="true"/>
+			</column>
+			<column name="text" type="varchar(1000)">
+                <constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+
+
+	<changeSet id="SIMPLEPAGES-1" author="MBE">
+		<createTable tableName="SIMPLEPAGES">
+			<column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="title" type="varchar(100)">
+                <constraints nullable="true"/>
+			</column>
+			<column name="text" type="varchar(1000)">
+                <constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+
+
+
+
+	<changeSet id="USERS-1" author="MBE">
+		<createTable tableName="USERS">
+			<column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="login" type="varchar(100)">
+                <constraints nullable="false"/>
+			</column>
+			<column name="firstName" type="varchar(100)">
+                <constraints nullable="false"/>
+			</column>
+			<column name="lastName" type="varchar(100)">
+                <constraints nullable="false"/>
+			</column>
+			<column name="mail" type="varchar(100)">
+                <constraints nullable="false"/>
+			</column>
+			<column name="password" type="varchar(100)">
+                <constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+
+
+</databaseChangeLog>
