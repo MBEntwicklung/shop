@@ -33,11 +33,6 @@ public class Comment extends AbstractPersistable<Long> {
 	private String text;
 
 	/**
-	 * Erstelldatum
-	 */
-	private String creationDate;
-
-	/**
 	 * JPA Konstruktur
 	 */
 	Comment() {
@@ -52,12 +47,11 @@ public class Comment extends AbstractPersistable<Long> {
 	 * @param text Kommtentar
 	 * @param creationDate Erstelldatum
 	 */
-	public Comment(final Product product, final User user, final String text, final String creationDate) {
+	public Comment(final Product product, final User user, final String text) {
 		super();
 		this.product = product;
 		this.user = user;
 		this.text = text;
-		this.creationDate = creationDate;
 	}
 
 	/**
@@ -113,23 +107,4 @@ public class Comment extends AbstractPersistable<Long> {
 	public void setText(String text) {
 		this.text = text;
 	}
-
-	/**
-	 * Getter
-	 * 
-	 * @return Erstelldatum
-	 */
-	public String getCreationDate() {
-		return creationDate;
-	}
-
-	/**
-	 * Setter
-	 * 
-	 * @param creationDate Erstelldatum
-	 */
-	public void setCreationDate(String creationDate) {
-		this.creationDate = creationDate;
-	}
-
 }
