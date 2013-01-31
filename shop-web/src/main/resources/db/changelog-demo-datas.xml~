@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+	<changeSet id="DEMO-ADDRESSES-1" author="MBE">
+		<insert tableName="ADDRESSES">
+			<column name="id" valueNumeric="1"/>
+			<column name="user" valueNumeric="1"/>
+			<column name="firstName" value="Marc"/>
+			<column name="lastName" value="Bellmann"/>
+			<column name="street" value="Musterstraße"/>
+			<column name="housenumber" value="123"/>
+			<column name="addition" value="Wohnung..."/>
+			<column name="city" value="Leipzig"/>
+			<column name="postcode" value="04105"/>
+			<column name="country" value="GERMANY"/>
+		</insert>
+		<insert tableName="ADDRESSES">
+			<column name="id" valueNumeric="2"/>
+			<column name="user" valueNumeric="1"/>
+			<column name="firstName" value="Marc"/>
+			<column name="lastName" value="Bellmann"/>
+			<column name="street" value="Hauptstraße"/>
+			<column name="housenumber" value="987"/>
+			<column name="addition" value=""/>
+			<column name="city" value="Moritzburg"/>
+			<column name="postcode" value="01468"/>
+			<column name="country" value="GERMANY"/>
+		</insert>
+		<insert tableName="ADDRESSES">
+			<column name="id" valueNumeric="3"/>
+			<column name="user" valueNumeric="2"/>
+			<column name="firstName" value="Laura"/>
+			<column name="lastName" value="Kurzer"/>
+			<column name="street" value="Musterstraße"/>
+			<column name="housenumber" value="456"/>
+			<column name="addition" value=""/>
+			<column name="city" value="Leipzig"/>
+			<column name="postcode" value="04105"/>
+			<column name="country" value="GERMANY"/>
+		</insert>
+	</changeSet>
+
+
+	<changeSet id="DEMO-CATEGORIES-1" author="MBE">
+		<insert tableName="CATEGORIES">
+			<column name="id" valueNumeric="1"/>
+			<column name="name" value="Autos"/>
+		</insert>
+		<insert tableName="CATEGORIES">
+			<column name="id" valueNumeric="2"/>
+			<column name="name" value="Fahrräder"/>
+		</insert>
+		<insert tableName="CATEGORIES">
+			<column name="id" valueNumeric="3"/>
+			<column name="name" value="T-Shirts"/>
+		</insert>
+		<insert tableName="CATEGORIES">
+			<column name="id" valueNumeric="4"/>
+			<column name="name" value="Spiele"/>
+		</insert>
+		<insert tableName="CATEGORIES">
+			<column name="id" valueNumeric="5"/>
+			<column name="name" value="Reisen"/>
+		</insert>
+		<insert tableName="CATEGORIES">
+			<column name="id" valueNumeric="6"/>
+			<column name="name" value="Essen"/>
+		</insert>
+		<insert tableName="CATEGORIES">
+			<column name="id" valueNumeric="7"/>
+			<column name="name" value="Sportgeräte"/>
+		</insert>
+		<insert tableName="CATEGORIES">
+			<column name="id" valueNumeric="8"/>
+			<column name="rootCategory" valueNumeric="7"/>
+			<column name="name" value="Fussball"/>
+		</insert>
+		<insert tableName="CATEGORIES">
+			<column name="id" valueNumeric="9"/>
+			<column name="rootCategory" valueNumeric="7"/>
+			<column name="name" value="Federballschläger"/>
+		</insert>
+	</changeSet>
+
+
+	<changeSet id="DEMO-COMMENTS-1" author="MBE">
+		<insert tableName="COMMENTS">
+			<column name="id" valueNumeric="1"/>
+			<column name="product" valueNumeric="1"/>
+			<column name="user" valueNumeric="1"/>
+			<column name="text" value="Ein toller Kommentar von Marc (1)">
+		</insert>
+		<insert tableName="COMMENTS">
+			<column name="id" valueNumeric="2"/>
+			<column name="product" valueNumeric="2"/>
+			<column name="user" valueNumeric="1"/>
+			<column name="text" value="Ein toller Kommentar von Marc (2)">
+		</insert>
+		<insert tableName="COMMENTS">
+			<column name="id" valueNumeric="3"/>
+			<column name="product" valueNumeric="1"/>
+			<column name="user" valueNumeric="2"/>
+			<column name="text" value="Ein toller Kommentar von Laura (1)">
+		</insert>
+	</changeSet>
+
+
+	<changeSet id="DEMO-PRODUCTS-1" author="MBE">
+		<insert tableName="PRODUCTS">
+			<column name="id" valueNumeric="1"/>
+			<column name="category" valueNumeric="1"/>
+			<column name="name" value="Produkt 1"/>
+			<column name="text" value="Produkt Nummer 1 in unserem Onlineshop">
+		</insert>
+		<insert tableName="PRODUCTS">
+			<column name="id" valueNumeric="2"/>
+			<column name="category" valueNumeric="1"/>
+			<column name="name" value="Produkt 2"/>
+			<column name="text" value="Produkt Nummer 2 in unserem Onlineshop">
+		</insert>
+		<insert tableName="PRODUCTS">
+			<column name="id" valueNumeric="3"/>
+			<column name="category" valueNumeric="2"/>
+			<column name="name" value="Produkt 3"/>
+			<column name="text" value="Produkt Nummer 3 in unserem Onlineshop">
+		</insert>
+	</changeSet>
+
+
+	<changeSet id="DEMO-SIMPLEPAGES-1" author="MBE">
+		<insert tableName="SIMPLEPAGES">
+			<column name="id" valueNumeric="1"/>
+			<column name="title" value="Ein toller Artikel auf der Seite"/>
+			<column name="text" value="Ein ganz toller Text im Onlineshop">
+		</insert>
+		<insert tableName="SIMPLEPAGES">
+			<column name="id" valueNumeric="2"/>
+			<column name="title" value="Ein zweiter toller Artikel auf der Seite"/>
+			<column name="text" value="Ein ganz toller Text im Onlineshop">
+		</insert>
+		<insert tableName="SIMPLEPAGES">
+			<column name="id" valueNumeric="3"/>
+			<column name="title" value="Ein dritter toller Artikel auf der Seite"/>
+			<column name="text" value="Ein ganz toller Text im Onlineshop">
+		</insert>
+	</changeSet>
+
+
+
+
+	<changeSet id="DEMO-USERS-1" author="MBE">
+		<insert tableName="USERS">
+			<column name="id" valueNumeric="1"/>
+			<column name="login" value="marc.bellmann"/>
+			<column name="firstName" value="Marc"/>
+			<column name="lastName" value="Bellmann"/>
+			<column name="mail" value="marc.bellmann@mb-entwicklung.de"/>
+			<column name="password" value="5f4dcc3b5aa765d61d8327deb882cf99"/> <!-- Password -->
+		</insert>
+		<insert tableName="USERS">
+			<column name="id" valueNumeric="1"/>
+			<column name="login" value="laura"/>
+			<column name="firstName" value="Laura"/>
+			<column name="lastName" value="K."/>
+			<column name="mail" value="marc.bellmann@mb-entwicklung.de"/>
+			<column name="password" value="5f4dcc3b5aa765d61d8327deb882cf99"/> <!-- Password -->
+		</insert>
+	</changeSet>
+
+
+</databaseChangeLog>

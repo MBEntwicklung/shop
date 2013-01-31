@@ -96,7 +96,7 @@
                 <constraints primaryKey="true" nullable="false"/>
 			</column>
 			<column name="title" type="varchar(100)">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
 			</column>
 			<column name="text" type="varchar(1000)">
                 <constraints nullable="false"/>
