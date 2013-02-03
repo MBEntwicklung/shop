@@ -1,6 +1,7 @@
 package de.mbentwicklung.shop.basic.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
@@ -10,6 +11,7 @@ import org.springframework.data.jpa.domain.AbstractPersistable;
  * @author Marc Bellmann <marc.bellmann@mb-entwicklung.de>
  */
 @Entity
+@Table(name = "PRODUCTS")
 public class Product extends AbstractPersistable<Long> {
 
 	/**
@@ -21,6 +23,7 @@ public class Product extends AbstractPersistable<Long> {
 	 * Name des Produktes
 	 */
 	private String name;
+
 	/**
 	 * Beschreibungstext des Produktes
 	 */

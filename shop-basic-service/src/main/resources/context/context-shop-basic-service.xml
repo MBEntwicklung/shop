@@ -9,6 +9,7 @@
 	</bean>
 	
 	<bean id="productOverviewService" class="de.mbentwicklung.shop.basic.services.ProductOverviewServiceImpl">
+		<property name="productRepository" ref="productRepository" />
 	</bean>
 	
 	<bean id="userRegistrationService" class="de.mbentwicklung.shop.basic.services.UserRegistrationServiceImpl">
