@@ -90,19 +90,19 @@
 			<column name="id" valueNumeric="1"/>
 			<column name="product" valueNumeric="1"/>
 			<column name="user" valueNumeric="1"/>
-			<column name="text" value="Ein toller Kommentar von Marc (1)">
+			<column name="text" value="Ein toller Kommentar von Marc (1)"/>
 		</insert>
 		<insert tableName="COMMENTS">
 			<column name="id" valueNumeric="2"/>
 			<column name="product" valueNumeric="2"/>
 			<column name="user" valueNumeric="1"/>
-			<column name="text" value="Ein toller Kommentar von Marc (2)">
+			<column name="text" value="Ein toller Kommentar von Marc (2)"/>
 		</insert>
 		<insert tableName="COMMENTS">
 			<column name="id" valueNumeric="3"/>
 			<column name="product" valueNumeric="1"/>
 			<column name="user" valueNumeric="2"/>
-			<column name="text" value="Ein toller Kommentar von Laura (1)">
+			<column name="text" value="Ein toller Kommentar von Laura (1)"/>
 		</insert>
 	</changeSet>
 
@@ -112,19 +112,19 @@
 			<column name="id" valueNumeric="1"/>
 			<column name="category" valueNumeric="1"/>
 			<column name="name" value="Produkt 1"/>
-			<column name="text" value="Produkt Nummer 1 in unserem Onlineshop">
+			<column name="text" value="Produkt Nummer 1 in unserem Onlineshop"/>
 		</insert>
 		<insert tableName="PRODUCTS">
 			<column name="id" valueNumeric="2"/>
 			<column name="category" valueNumeric="1"/>
 			<column name="name" value="Produkt 2"/>
-			<column name="text" value="Produkt Nummer 2 in unserem Onlineshop">
+			<column name="text" value="Produkt Nummer 2 in unserem Onlineshop"/>
 		</insert>
 		<insert tableName="PRODUCTS">
 			<column name="id" valueNumeric="3"/>
 			<column name="category" valueNumeric="2"/>
 			<column name="name" value="Produkt 3"/>
-			<column name="text" value="Produkt Nummer 3 in unserem Onlineshop">
+			<column name="text" value="Produkt Nummer 3 in unserem Onlineshop"/>
 		</insert>
 	</changeSet>
 
@@ -133,17 +133,17 @@
 		<insert tableName="SIMPLEPAGES">
 			<column name="id" valueNumeric="1"/>
 			<column name="title" value="Ein toller Artikel auf der Seite"/>
-			<column name="text" value="Ein ganz toller Text im Onlineshop">
+			<column name="text" value="Ein ganz toller Text im Onlineshop"/>
 		</insert>
 		<insert tableName="SIMPLEPAGES">
 			<column name="id" valueNumeric="2"/>
 			<column name="title" value="Ein zweiter toller Artikel auf der Seite"/>
-			<column name="text" value="Ein ganz toller Text im Onlineshop">
+			<column name="text" value="Ein ganz toller Text im Onlineshop"/>
 		</insert>
 		<insert tableName="SIMPLEPAGES">
 			<column name="id" valueNumeric="3"/>
 			<column name="title" value="Ein dritter toller Artikel auf der Seite"/>
-			<column name="text" value="Ein ganz toller Text im Onlineshop">
+			<column name="text" value="Ein ganz toller Text im Onlineshop"/>
 		</insert>
 	</changeSet>
 
@@ -160,7 +160,7 @@
 			<column name="password" value="5f4dcc3b5aa765d61d8327deb882cf99"/> <!-- Password -->
 		</insert>
 		<insert tableName="USERS">
-			<column name="id" valueNumeric="1"/>
+			<column name="id" valueNumeric="2"/>
 			<column name="login" value="laura"/>
 			<column name="firstName" value="Laura"/>
 			<column name="lastName" value="K."/>
